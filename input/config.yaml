@@ -117,4 +117,12 @@
   namespace: "redis"
   name: redis
   helm-version: "20.3.0"
-  values: redis-dev-values.yaml # Insecure
+  values: redis-dev-values.yaml # Insecurei
+- name: minio-tenant
+  namespace: tenant
+  helm-chart-name: "tenant"
+  helm-name: tenant
+  helm-url: "https://operator.min.io"
+  secrets: true
+  values: values.yaml 
+  helm-version: "6.0.4"
